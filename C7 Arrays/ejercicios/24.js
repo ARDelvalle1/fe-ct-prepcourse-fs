@@ -5,6 +5,24 @@ function continueStatement(num) {
   // se continúa con la siguiente iteración.
   // PISTA: Utiliza el statement 'continue'.
   // Tu código:
-}
+
+  var total=[]
+  total[0]=num+2
+  var suma
+  for(var i=1;i<10;i++){
+    if(i===5){
+      continue
+    }else if(i<5){
+      total[i]=total[i-1]+2
+    }
+    else if(i>5){
+      total[i-1]=total[i-2]+2
+    }   
+    }
+    return total
+  }
+
+console.log(continueStatement(50))
+
 
 module.exports = continueStatement;
